@@ -1,0 +1,1074 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Tipos de Ángulos</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+
+background:
+linear-gradient(135deg,#081326,#0b1d3a,#101f52,#05101f);
+
+overflow-x:hidden;
+
+color:white;
+
+}
+
+/*======================
+FONDO ANIMADO
+======================*/
+
+body::before{
+
+content:"";
+
+position:fixed;
+
+width:220%;
+
+height:220%;
+
+left:-60%;
+
+top:-60%;
+
+background:
+radial-gradient(circle,#4dc3ff55 1px,transparent 1px);
+
+background-size:45px 45px;
+
+animation:fondo 70s linear infinite;
+
+z-index:-3;
+
+}
+
+@keyframes fondo{
+
+0%{
+
+transform:rotate(0deg);
+
+}
+
+100%{
+
+transform:rotate(360deg);
+
+}
+
+}
+
+/*==================
+PARTICULAS
+===================*/
+
+#particles{
+
+position:fixed;
+
+width:100%;
+
+height:100%;
+
+overflow:hidden;
+
+top:0;
+
+left:0;
+
+z-index:-2;
+
+}
+
+.bubble{
+
+position:absolute;
+
+bottom:-100px;
+
+background:#77d8ff;
+
+border-radius:50%;
+
+opacity:.25;
+
+animation:float linear infinite;
+
+}
+
+@keyframes float{
+
+0%{
+
+transform:translateY(0);
+
+}
+
+100%{
+
+transform:translateY(-120vh);
+
+}
+
+}
+
+/*==================
+HEADER
+===================*/
+
+header{
+
+position:fixed;
+
+top:0;
+
+left:0;
+
+width:100%;
+
+padding:18px 40px;
+
+display:flex;
+
+justify-content:space-between;
+
+align-items:center;
+
+background:rgba(0,0,0,.35);
+
+backdrop-filter:blur(15px);
+
+z-index:999;
+
+border-bottom:1px solid rgba(255,255,255,.1);
+
+}
+
+.logo{
+
+font-size:28px;
+
+font-weight:700;
+
+color:#67e8ff;
+
+}
+
+nav{
+
+display:flex;
+
+gap:18px;
+
+flex-wrap:wrap;
+
+}
+
+nav a{
+
+color:white;
+
+text-decoration:none;
+
+padding:10px 16px;
+
+border-radius:30px;
+
+transition:.4s;
+
+font-size:15px;
+
+}
+
+nav a:hover{
+
+background:#18c8ff;
+
+color:#00152d;
+
+transform:translateY(-3px);
+
+}
+
+/*====================
+BARRA PROGRESO
+====================*/
+
+.progress{
+
+position:fixed;
+
+top:78px;
+
+left:0;
+
+height:5px;
+
+width:0;
+
+background:#00d4ff;
+
+z-index:999;
+
+}
+
+/*======================
+SECCIONES
+======================*/
+
+section{
+
+min-height:100vh;
+
+padding:120px 8%;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+flex-direction:column;
+
+}
+
+/*======================
+TARJETAS
+======================*/
+
+.card{
+
+width:100%;
+
+max-width:1200px;
+
+background:rgba(255,255,255,.08);
+
+backdrop-filter:blur(20px);
+
+border-radius:30px;
+
+padding:45px;
+
+box-shadow:0 0 35px rgba(0,255,255,.15);
+
+border:1px solid rgba(255,255,255,.1);
+
+animation:fade 1.3s;
+
+}
+
+@keyframes fade{
+
+from{
+
+opacity:0;
+
+transform:translateY(40px);
+
+}
+
+to{
+
+opacity:1;
+
+transform:translateY(0);
+
+}
+
+}
+
+h1{
+
+font-size:55px;
+
+text-align:center;
+
+margin-bottom:20px;
+
+background:linear-gradient(90deg,#6df7ff,#ffffff,#55a5ff);
+
+-webkit-background-clip:text;
+
+-webkit-text-fill-color:transparent;
+
+}
+
+h2{
+
+font-size:40px;
+
+margin-bottom:30px;
+
+text-align:center;
+
+color:#67e8ff;
+
+}
+
+h3{
+
+margin-top:25px;
+
+font-size:25px;
+
+color:#ffd86b;
+
+}
+
+p{
+
+font-size:18px;
+
+line-height:1.9;
+
+margin-top:15px;
+
+}
+
+/*======================
+BOTONES
+======================*/
+
+.btn{
+
+display:inline-block;
+
+margin-top:35px;
+
+padding:18px 35px;
+
+border-radius:50px;
+
+background:linear-gradient(45deg,#00b7ff,#5ce1ff);
+
+text-decoration:none;
+
+font-size:18px;
+
+font-weight:bold;
+
+color:#041a31;
+
+transition:.4s;
+
+}
+
+.btn:hover{
+
+transform:scale(1.07);
+
+box-shadow:0 0 25px cyan;
+
+}
+
+/*======================
+OBJETIVOS
+======================*/
+
+.grid{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+margin-top:40px;
+
+}
+
+.obj{
+
+background:rgba(255,255,255,.08);
+
+padding:25px;
+
+border-radius:20px;
+
+transition:.4s;
+
+}
+
+.obj:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 0 20px #35d4ff;
+
+}
+
+.obj h4{
+
+font-size:22px;
+
+margin-bottom:12px;
+
+color:#73ecff;
+
+}
+
+/*======================
+IFRAMES
+======================*/
+
+iframe{
+
+width:100%;
+
+border:none;
+
+border-radius:20px;
+
+margin-top:25px;
+
+}
+
+/*======================
+TABLAS
+======================*/
+
+table{
+
+width:100%;
+
+border-collapse:collapse;
+
+margin-top:25px;
+
+}
+
+td,th{
+
+padding:15px;
+
+border:1px solid rgba(255,255,255,.2);
+
+}
+
+th{
+
+background:#13cfff;
+
+color:#06294d;
+
+}
+
+tr:nth-child(even){
+
+background:rgba(255,255,255,.05);
+
+}
+
+/*======================
+FOOTER
+======================*/
+
+footer{
+
+padding:30px;
+
+text-align:center;
+
+background:#00000055;
+
+}
+
+/*======================
+RESPONSIVE
+======================*/
+
+@media(max-width:900px){
+
+header{
+
+flex-direction:column;
+
+}
+
+h1{
+
+font-size:40px;
+
+}
+
+h2{
+
+font-size:30px;
+
+}
+
+nav{
+
+justify-content:center;
+
+}
+
+.card{
+
+padding:25px;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div id="particles"></div>
+
+<div class="progress" id="barra"></div>
+
+<header>
+
+<div class="logo">
+
+📐 Tipos de Ángulos
+
+</div>
+
+<nav>
+
+<a href="#inicio">Inicio</a>
+
+<a href="#teoria">Teoría</a>
+
+<a href="#video">Video</a>
+
+<a href="#simulador">Simulador</a>
+
+<a href="#actividad">Actividad</a>
+
+<a href="#evaluacion">Evaluación</a>
+
+</nav>
+
+</header>
+
+<!--=====================================
+INICIO
+======================================-->
+
+<section id="inicio">
+
+<div class="card">
+
+<h1>Explorando el Mundo de los Ángulos</h1>
+
+<p style="text-align:center;font-size:22px">
+
+Bienvenido a esta plataforma interactiva donde descubrirás qué son los ángulos, cómo se clasifican y cómo aparecen en la vida cotidiana. Cada sección está diseñada para ayudarte a aprender de manera práctica mediante explicaciones, videos, simulaciones, actividades y una evaluación final.
+
+</p>
+
+<a href="#teoria" class="btn">
+
+🚀 Comenzar
+
+</a>
+
+<div class="grid">
+
+<div class="obj">
+
+<h4>🎯 Objetivo 1</h4>
+
+<p>
+
+Identificar los diferentes tipos de ángulos según su medida.
+
+</p>
+
+</div>
+
+<div class="obj">
+
+<h4>📚 Objetivo 2</h4>
+
+<p>
+
+Relacionar los ángulos con situaciones presentes en la vida cotidiana y en la geometría.
+
+</p>
+
+</div>
+
+<div class="obj">
+
+<h4>🧩 Objetivo 3</h4>
+
+<p>
+
+Resolver actividades interactivas utilizando recursos digitales.
+
+</p>
+
+</div>
+
+<div class="obj">
+
+<h4>🏆 Objetivo 4</h4>
+
+<p>
+
+Evaluar los conocimientos adquiridos mediante un formulario con retroalimentación.
+
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- CONTINÚA EN LA PARTE 2 -->
+<!--=====================================
+TEORÍA
+======================================-->
+
+<section id="teoria">
+
+  <div class="card">
+  
+  <h2>📖 Teoría: Tipos de Ángulos</h2>
+  
+  <p>
+  Un <strong>ángulo</strong> es la abertura formada por dos semirrectas que tienen un mismo punto de origen, llamado <strong>vértice</strong>. Los ángulos se miden en grados (°) utilizando un transportador.
+  </p>
+  
+  <h3>¿Cuáles son los elementos de un ángulo?</h3>
+  
+  <ul style="margin-left:25px; line-height:2; margin-top:15px;">
+  <li>✔ Vértice</li>
+  <li>✔ Lado inicial</li>
+  <li>✔ Lado final</li>
+  <li>✔ Amplitud o medida del ángulo</li>
+  </ul>
+  
+  <h3>Clasificación de los ángulos</h3>
+  
+  <table>
+  
+  <tr>
+  <th>Tipo</th>
+  <th>Medida</th>
+  <th>Ejemplo</th>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Agudo</td>
+  <td>Mayor que 0° y menor que 90°</td>
+  <td>35°</td>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Recto</td>
+  <td>90°</td>
+  <td>90°</td>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Obtuso</td>
+  <td>Mayor que 90° y menor que 180°</td>
+  <td>120°</td>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Llano</td>
+  <td>180°</td>
+  <td>180°</td>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Cóncavo</td>
+  <td>Mayor que 180° y menor que 360°</td>
+  <td>240°</td>
+  </tr>
+  
+  <tr>
+  <td>Ángulo Completo</td>
+  <td>360°</td>
+  <td>360°</td>
+  </tr>
+  
+  </table>
+  
+  <h3>Ejemplos en la vida cotidiana</h3>
+  
+  <div class="grid">
+  
+  <div class="obj">
+  <h4>📚 Libro</h4>
+  <p>Cuando un libro está un poco abierto se forma un ángulo agudo.</p>
+  </div>
+  
+  <div class="obj">
+  <h4>🚪 Puerta</h4>
+  <p>Una puerta abierta exactamente a 90° representa un ángulo recto.</p>
+  </div>
+  
+  <div class="obj">
+  <h4>🕒 Reloj</h4>
+  <p>Las manecillas de un reloj forman distintos tipos de ángulos según la hora.</p>
+  </div>
+  
+  <div class="obj">
+  <h4>✂ Tijeras</h4>
+  <p>La abertura de unas tijeras permite observar diferentes clases de ángulos.</p>
+  </div>
+  
+  </div>
+  
+  <h3>Resumen</h3>
+  
+  <p>
+  
+  ✔ Agudo → menos de 90°<br>
+  
+  ✔ Recto → 90°<br>
+  
+  ✔ Obtuso → entre 90° y 180°<br>
+  
+  ✔ Llano → 180°<br>
+  
+  ✔ Cóncavo → entre 180° y 360°<br>
+  
+  ✔ Completo → 360°
+  
+  </p>
+  
+  <a href="#video" class="btn">
+  
+  Continuar al Video ▶
+  
+  </a>
+  
+  </div>
+  
+  </section>
+  
+  <!--=====================================
+  VIDEO
+  ======================================-->
+  
+  <section id="video">
+  
+  <div class="card">
+  
+  <h2>🎥 Video Explicativo</h2>
+  
+  <p style="text-align:center">
+  Observa atentamente el siguiente video antes de continuar con la simulación interactiva.
+  </p>
+  
+  <div style="margin-top:35px">
+  
+  <iframe
+  height="600"
+  src="https://www.youtube.com/embed/-zLWJYY42GU?si=1NYAR4Zpy2e6JnUr"
+  title="Video Tipos de Ángulos"
+  allowfullscreen>
+  </iframe>
+  
+  </div>
+  
+  <div style="text-align:center">
+  
+  <a href="#simulador" class="btn">
+  
+  Ir al Simulador 🧪
+  
+  </a>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <!--=====================================
+  SIMULADOR
+  ======================================-->
+  
+  <section id="simulador">
+  
+  <div class="card">
+  
+  <h2>🧪 Simulador Interactivo GeoGebra</h2>
+  
+  <p style="text-align:center">
+  
+  Manipula el simulador, cambia la posición de los lados del ángulo y observa cómo cambia su medida.
+  
+  </p>
+  
+  <div style="margin-top:30px">
+  
+  <iframe
+  height="700"
+  scrolling="no"
+  src="https://www.geogebra.org/material/iframe/id/AMk7EfZe/width/1382/height/647/border/888888/sfsb/true/smb/false/stb/false/stbh/false/ai/false/asb/false/sri/false/rc/false/ld/false/sdz/false/ctl/false">
+  </iframe>
+  
+  </div>
+  
+  <div style="text-align:center">
+  
+  <a href="#actividad" class="btn">
+  
+  Continuar a la Actividad ✍
+  
+  </a>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <!-- CONTINÚA EN LA PARTE 3 -->
+  <!--=====================================
+ACTIVIDAD
+======================================-->
+
+<section id="actividad">
+
+  <div class="card">
+  
+  <h2>✍️ Actividad Interactiva</h2>
+  
+  <p style="text-align:center">
+  
+  Pon a prueba lo aprendido resolviendo la siguiente actividad de Wordwall.
+  
+  </p>
+  
+  <iframe
+  src="https://wordwall.net/es/embed/f7b865fc6a0d421c96666106494eed35?themeId=1&templateId=5&fontStackId=0"
+  height="650"
+  allowfullscreen>
+  </iframe>
+  
+  <div style="text-align:center">
+  
+  <a href="#evaluacion" class="btn">
+  
+  Ir a la Evaluación 📝
+  
+  </a>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <!--=====================================
+  EVALUACIÓN
+  ======================================-->
+  
+  <section id="evaluacion">
+  
+  <div class="card">
+  
+  <h2>📝 Evaluación Final</h2>
+  
+  <p style="text-align:center">
+  
+  Responde el siguiente formulario. Lee cuidadosamente cada pregunta antes de contestar.
+  
+  </p>
+  
+  <iframe
+  
+  src="https://docs.google.com/forms/d/e/1FAIpQLSdsvtMx3hg8TYrcewulX_eyLG5Raj3lq_Lz1sDkc_41Q3ZSLQ/viewform?embedded=true"
+  
+  height="1500">
+  
+  </iframe>
+  
+  <div style="text-align:center">
+  
+  <a href="#inicio" class="btn">
+  
+  🏠 Volver al Inicio
+  
+  </a>
+  
+  </div>
+  
+  </div>
+  
+  </section>
+  
+  <footer>
+  
+  <h3>📐 Plataforma Educativa de Matemáticas</h3>
+  
+  <p>
+  
+  Diseñada para fortalecer el aprendizaje mediante teoría, videos, simulaciones y actividades interactivas.
+  
+  </p>
+  
+  <p>
+  
+  © 2026 - Elaborada para estudiantes de Educación Básica Superior.
+  
+  </p>
+  
+  </footer>
+  
+  <script>
+  
+  /*==========================
+  PARTÍCULAS
+  ==========================*/
+  
+  const contenedor=document.getElementById("particles");
+  
+  for(let i=0;i<45;i++){
+  
+  let b=document.createElement("span");
+  
+  b.className="bubble";
+  
+  let s=Math.random()*25+8;
+  
+  b.style.width=s+"px";
+  
+  b.style.height=s+"px";
+  
+  b.style.left=Math.random()*100+"%";
+  
+  b.style.animationDuration=(Math.random()*15+12)+"s";
+  
+  b.style.animationDelay=Math.random()*8+"s";
+  
+  contenedor.appendChild(b);
+  
+  }
+  
+  /*==========================
+  BARRA DE PROGRESO
+  ==========================*/
+  
+  window.addEventListener("scroll",()=>{
+  
+  let scroll=document.documentElement.scrollTop;
+  
+  let altura=document.documentElement.scrollHeight-document.documentElement.clientHeight;
+  
+  let porcentaje=(scroll/altura)*100;
+  
+  document.getElementById("barra").style.width=porcentaje+"%";
+  
+  });
+  
+  /*==========================
+  ANIMACIÓN DE TARJETAS
+  ==========================*/
+  
+  const tarjetas=document.querySelectorAll(".card");
+  
+  const observador=new IntersectionObserver((entradas)=>{
+  
+  entradas.forEach((entrada)=>{
+  
+  if(entrada.isIntersecting){
+  
+  entrada.target.style.opacity="1";
+  
+  entrada.target.style.transform="translateY(0px)";
+  
+  }
+  
+  });
+  
+  });
+  
+  tarjetas.forEach((card)=>{
+  
+  card.style.opacity="0";
+  
+  card.style.transform="translateY(60px)";
+  
+  card.style.transition="1s";
+  
+  observador.observe(card);
+  
+  });
+  
+  /*==========================
+  MENÚ ACTIVO
+  ==========================*/
+  
+  const enlaces=document.querySelectorAll("nav a");
+  const secciones=document.querySelectorAll("section");
+  
+  window.addEventListener("scroll",()=>{
+  
+  let actual="";
+  
+  secciones.forEach(sec=>{
+  
+  const top=window.scrollY;
+  const offset=sec.offsetTop-180;
+  const alto=sec.offsetHeight;
+  
+  if(top>=offset && top<offset+alto){
+  
+  actual=sec.getAttribute("id");
+  
+  }
+  
+  });
+  
+  enlaces.forEach(link=>{
+  
+  link.style.background="transparent";
+  
+  if(link.getAttribute("href")=="#"+actual){
+  
+  link.style.background="#16d9ff";
+  link.style.color="#001a35";
+  
+  }
+  
+  });
+  
+  });
+  
+  </script>
+  
+  </body>
+  
+  </html>
